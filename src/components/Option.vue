@@ -1,4 +1,5 @@
 <script>
+  import { Transition } from 'vue'
   import { UNCHECKED, INDETERMINATE, CHECKED } from '../constants'
   import { onLeftClick } from '../utils'
   import Tip from './Tip'
@@ -9,6 +10,10 @@
   const Option = {
     name: 'vue-treeselect--option',
     inject: [ 'instance' ],
+
+    components: {
+      Transition,
+    },
 
     props: {
       node: {
@@ -76,10 +81,8 @@
 
         if (node.isBranch) {
           const transitionProps = {
-            props: {
-              name: 'vue-treeselect__option-arrow--prepare',
-              appear: true,
-            },
+            name: 'vue-treeselect__option-arrow--prepare',
+            appear: true,
           }
           const arrowClass = {
             'vue-treeselect__option-arrow': true,
@@ -277,9 +280,7 @@
         [`vue-treeselect__indent-level-${indentLevel}`]: true,
       }
       const transitionProps = {
-        props: {
-          name: 'vue-treeselect__list--transition',
-        },
+        name: 'vue-treeselect__list--transition',
       }
 
       return (

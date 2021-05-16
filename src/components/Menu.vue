@@ -1,4 +1,5 @@
 <script>
+  import { Transition } from 'vue'
   import { MENU_BUFFER } from '../constants'
   import { watchSize, setupResizeAndScrollEventListeners } from '../utils'
   import Option from './Option'
@@ -14,6 +15,10 @@
   export default {
     name: 'vue-treeselect--menu',
     inject: [ 'instance' ],
+
+    components: {
+      Transition,
+    },
 
     computed: {
       menuStyle() {

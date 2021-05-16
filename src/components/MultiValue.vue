@@ -1,4 +1,5 @@
 <script>
+  import { Transition, TransitionGroup } from 'vue'
   import MultiValueItem from './MultiValueItem'
   import Input from './Input'
   import Placeholder from './Placeholder'
@@ -6,6 +7,11 @@
   export default {
     name: 'vue-treeselect--multi-value',
     inject: [ 'instance' ],
+
+    components: {
+      Transition,
+      TransitionGroup,
+    },
 
     methods: {
       renderMultiValueItems() {
@@ -36,11 +42,9 @@
     render() {
       const { renderValueContainer } = this.$parent
       const transitionGroupProps = {
-        props: {
-          tag: 'div',
-          name: 'vue-treeselect__multi-value-item--transition',
-          appear: true,
-        },
+        tag: 'div',
+        name: 'vue-treeselect__multi-value-item--transition',
+        appear: true,
       }
 
       return renderValueContainer(
