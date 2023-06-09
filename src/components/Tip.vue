@@ -1,7 +1,6 @@
-<script>
+<script lang="jsx">
   export default {
     name: 'vue-treeselect--tip',
-    functional: true,
 
     props: {
       type: {

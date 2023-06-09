@@ -1,4 +1,4 @@
-<script>
+<script lang="jsx">
   import Input from './Input'
   import Placeholder from './Placeholder'
 

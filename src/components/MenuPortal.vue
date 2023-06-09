@@ -1,5 +1,5 @@
-<script>
-  import Vue from 'vue'
+<script lang="jsx">
+  import { createApp } from 'vue'
   import { watchSize, setupResizeAndScrollEventListeners, find } from '../utils'
   import Menu from './Menu'
 
@@ -152,7 +152,8 @@
         const el = document.createElement('div')
         document.body.appendChild(el)
 
-        this.portalTarget = new Vue({
+        // TODO: test for Vue 3
+        this.portalTarget = createApp({
           el,
           parent: this,
           ...PortalTarget,

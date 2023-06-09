@@ -11,15 +11,14 @@
 </template>
 
 <script>
-  import Vue from 'vue'
-  import Vuex, { mapState, mapMutations } from 'vuex'
+  import { createStore, mapState, mapMutations } from 'vuex'
   import { generateOptions } from './utils'
 
-  Vue.use(Vuex)
-
-  const store = new Vuex.Store({
-    state: {
-      value: 'a',
+  const store = createStore({
+    state() {
+      return {
+        value: 'a',
+      }
     },
     mutations: {
       updateValue(state, value) {

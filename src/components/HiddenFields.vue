@@ -1,4 +1,4 @@
-<script>
+<script lang="jsx">
   import { isNaN } from '../utils'
 
   function stringifyValue(value) {
@@ -12,7 +12,6 @@
   export default {
     name: 'vue-treeselect--hidden-fields',
     inject: [ 'instance' ],
-    functional: true,
 
     render() {
       const instance = this.instance

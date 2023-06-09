@@ -1,4 +1,4 @@
-<script>
+<script lang="jsx">
   export default {
     name: 'vue-treeselect--placeholder',
     inject: [ 'instance' ],

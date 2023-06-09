@@ -24,11 +24,14 @@ module.exports = {
         options: {
           compilerOptions: {
             preserveWhitespace: false,
+            compatConfig: {
+              MODE: 3,
+            },
           },
         },
       }),
       utils.withCacheLoader({
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         include: [ 'src', 'docs', 'test' ].map(utils.resolve),
       }),

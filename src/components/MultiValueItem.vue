@@ -1,4 +1,4 @@
-<script>
+<script lang="jsx">
   import { onLeftClick } from '../utils'
   import DeleteIcon from './icons/Delete'
 

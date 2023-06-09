@@ -1,4 +1,4 @@
-<script>
+<script lang="jsx">
   import { Transition, TransitionGroup } from 'vue'
   import MultiValueItem from './MultiValueItem'
   import Input from './Input'
